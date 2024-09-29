@@ -10,16 +10,13 @@
 
 <body>
 
-    <div class="container">
-        <h1>Weather App</h1>
-        <input type="text" id="locationInput" placeholder="Enter a city">
-        <button id="searchButton">Search</button>
+    <form class="weatherForm">
+        <input type="text" class="cityInput" placeholder="Enter city">
+        <button type="submit">Get Weather</button>
+    </form>
 
-        <div class="weather-info">
-            <h2 id="locatio"></h2>
-            <p id="temperature"></p>
-            <p id="description"></p>
-        </div>
+    <div class="card" style="display: none">
+
     </div>
     <script src="index.js"></script>
 </body>
