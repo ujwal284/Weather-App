@@ -47,9 +47,14 @@ function displayWeatherInfo(data) {
     const descDisplay = document.createElement("p");
     const weatherEmoji = document.createElement("p");
 
-    // Display temperature in Fahrenheit since you're using `imperial` units
+
     cityDisplay.textContent = city;
-    tempDisplay.textContent = `Temperature: ${temp.toFixed(1)}°F`;
+    // Convert Fahrenheit to Celsius
+    let tempInCelsius = (temp - 32) * (5 / 9);
+
+    cityDisplay.textContent = city;
+    tempDisplay.textContent = `Temperature: ${tempInCelsius.toFixed(1)}°C`;
+
     humidityDisplay.textContent = `Humidity: ${humidity}%`;
     descDisplay.textContent = `Weather: ${description}`;
     weatherEmoji.textContent = getWeatherEmoji(id); // Use emoji based on weather condition ID
